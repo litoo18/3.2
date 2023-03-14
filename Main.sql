@@ -1,0 +1,35 @@
+DROP DATABASE IF EXISTS Juego;
+CREATE DATABASE Juego;
+USE Juego;
+
+CREATE TABLE Jugador (
+	username TEXT NOT NULL, 
+	password TEXT NOT NULL,
+	ID INTEGER PRIMARY KEY NOT NULL
+	) ENGINE = InnoDB;
+
+CREATE TABLE Partida (
+	identificador INTEGER PRIMARY KEY NOT NULL,
+	fecha_hora DATETIME NOT NULL,
+	duracion int NOT NULL,
+	ganador TEXT NOT NULL
+	) ENGINE = InnoDB;
+
+INSERT INTO Jugador VALUES('Juan','mimara', 1111);
+INSERT INTO Jugador VALUES('Miguel', 'Limon123', 1112);
+INSERT INTO Jugador VALUES('Aleix','Platano123', 1113);
+INSERT INTO Jugador VALUES('Pol','Manzana123', 1114);
+INSERT INTO Jugador VALUES('Galder','Melon123', 1115);
+INSERT INTO Jugador VALUES('Alex','Sandia123', 1116);
+INSERT INTO Jugador VALUES('Carlos','Pera123', 1117);
+INSERT INTO Partida VALUES(5, '2024-04-01 12:00:00', 50, 'Carlos');
+INSERT INTO Partida VALUES(1, '2023-03-14 15:30:00', 45, 'Juan');
+INSERT INTO Partida VALUES(2, '2023-04-16 12:00:00', 59, 'Pol');
+INSERT INTO Partida VALUES(4, '2022-02-10 15:00:00', 45, 'Carlos');
+INSERT INTO Partida VALUES(3, '2024-04-09 12:00:00', 30, 'Pol');
+
+
+
+
+
+
